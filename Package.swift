@@ -6,27 +6,30 @@ let package = Package(
     name: "SwiftCloudDrive",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v15),
+        .iOS(.v12),
         .visionOS(.v1),
         .macCatalyst(.v15),
         .tvOS(.v15),
-        .watchOS(.v9)
+        .watchOS(.v9),
     ],
     products: [
         .library(
             name: "SwiftCloudDrive",
-            targets: ["SwiftCloudDrive"]),
+            targets: ["SwiftCloudDrive"]
+        ),
     ],
     targets: [
         .target(
             name: "SwiftCloudDrive",
             dependencies: [],
             resources: [
-                .process("PrivacyInfo.xcprivacy")
-            ]),
+                .process("PrivacyInfo.xcprivacy"),
+            ]
+        ),
         .testTarget(
             name: "SwiftCloudDriveTests",
-            dependencies: ["SwiftCloudDrive"]),
+            dependencies: ["SwiftCloudDrive"]
+        ),
     ],
-    swiftLanguageModes: [.v5,.v6]
+    swiftLanguageModes: [.v5, .v6]
 )
